@@ -9,3 +9,24 @@ class Editor(models.Model):
 
     def __str__(self):
         return self.name
+
+class Train(models.Model):
+    name = models.CharField(max_length=100)
+    power_type = models.CharField(max_length=100)
+    builder = models.CharField(max_length=100)
+    year = models.IntegerField()
+    country = models.CharField(max_length=100)
+    description = models.TextField()
+    photo_url = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+class Plane(models.Model):
+    name = models.CharField(max_length=100)
+    role = models.CharField(max_length=100)
+    manufacturer = models.CharField(max_length=100)
+    year = models.IntegerField()
+    country = models.CharField(max_length=100)
+    description = models.TextField()
+    photo_url = models.TextField()
