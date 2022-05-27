@@ -7,11 +7,11 @@
 It started out as a train and plane blog thing. Now it is going to be an API for for all vehicles! Land, sea, air, and space! It going to be built in Python using Django framework with a postgreSQL database.
 ***
 ### ***Technologies Used***
-HTML
-CSS
-Python
-Django
-Postgres
+1. HTML
+2. CSS
+3. Python
+4. Django
+5. Postgres
 
 ***
 ### ***Getting Started***
@@ -30,8 +30,9 @@ Postgres
 
 ***
 ### ***Future Updates***
--adding automobiles
--adding seacraft
+- [ ] creating automobiles model
+- [ ] creating seacraft model
+- [ ] creating login and auth
 
 ***
 ### ***Credits***
