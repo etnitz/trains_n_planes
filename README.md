@@ -4,13 +4,11 @@
 [GitHub](https://github.com/etnitz) [LinkedIn](https://www.linkedin.com/in/ethan-nitz-5822a112/)
 ***
 ### ***Description***
-An app for everyone who loves trains and planes
+It started out as a train and plane blog thing. Now it is going to be an API for for all vehicles! Land, sea, air, and space! It going to be built in Python using Django framework with a postgreSQL database.
 ***
 ### ***Technologies Used***
 HTML
 CSS
-JS
-React
 Python
 Django
 Postgres
@@ -32,6 +30,8 @@ Postgres
 
 ***
 ### ***Future Updates***
+-adding automobiles
+-adding seacraft
 
 ***
 ### ***Credits***
