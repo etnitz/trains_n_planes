@@ -45,3 +45,16 @@ class Car(models.Model):
 
     def __str__(self):
         return self.name
+
+class Boat(models.Model):
+    name = models.CharField(max_length=100)
+    type = models.CharField(max_length=100)
+    builder = models.CharField(max_length=100)
+    year = models.IntegerField()
+    length = models.CharField(max_length=100)
+    country = models.CharField(max_length=100)
+    description = models.TextField()
+    photo_url = models.TextField()
+
+    def __str__(self):
+        return self.name
