@@ -33,3 +33,15 @@ class Plane(models.Model):
 
     def __str__(self):
         return self.name
+
+class Car(models.Model):
+    name = models.CharField(max_length=100)
+    type = models.CharField(max_length=100)
+    manufacturer = models.CharField(max_length=100)
+    year = models.IntegerField()
+    country = models.CharField(max_length=100)
+    description = models.TextField()
+    photo_url = models.TextField()
+
+    def __str__(self):
+        return self.name
