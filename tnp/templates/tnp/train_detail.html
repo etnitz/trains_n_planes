@@ -1,9 +1,9 @@
 {% block content %}
-<h2>{{ train.name }} <a href="">(edit)</a></h2>
+<h1>{{ train.name }} <a href="">(edit)</a></h1>
 <img src="{{ train.photo_url }}" alt="" class="train-photo"/>
-<h4>{{ train.power_type }}</h4>
-<h4>{{ train.builder }}</h4>
-<h4>{{ train.year }}</h4>
-<h4>{{ train.country }}</h4>
+<h4>Power Type: {{ train.power_type }}</h4>
+<h4>Builder: {{ train.builder }}</h4>
+<h4>Year: {{ train.year }}</h4>
+<h4>Country: {{ train.country }}</h4>
 <p>{{ train.description }}</p>
 {% endblock %}
