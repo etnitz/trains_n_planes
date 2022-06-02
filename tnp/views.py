@@ -15,3 +15,6 @@ def car_list(request):
     cars = Car.objects.all()
     return render(request, 'tnp/car_list.html', {'cars':cars})
 
+def boat_list(request):
+    boats = Boat.objects.all()
+    return render(request, 'tnp/boat_list.html', {'boats':boats})
