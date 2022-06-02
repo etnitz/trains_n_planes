@@ -3,7 +3,7 @@
 <ul>
     {% for train in trains %}
     <li>
-        <a href="">{{ train.name }}</a>
+        <a href="{% url 'train_detail' pk=train.pk %}">{{ train.name }}</a>
     </li>
     {% endfor %}
 </ul>
