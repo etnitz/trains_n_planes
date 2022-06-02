@@ -26,3 +26,7 @@ def train_detail(request, pk):
 def plane_detail(request, pk):
     plane = Plane.objects.get(id = pk)
     return render(request, 'tnp/plane_detail.html', {'plane':plane})
+
+def car_detail(request, pk):
+    car = Car.objects.get(id = pk)
+    return render(request, 'tnp/car_detail.html', {'car':car})
