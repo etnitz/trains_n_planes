@@ -2,7 +2,7 @@
 <ul>
     {% for boat in boats %}
     <li>
-        <a href="">{{ boat.name }}</a>
+        <a href="{% url 'boat_detail' pk=boat.pk %}">{{ boat.name }}</a>
     </li>
     {% endfor %}
 </ul>
