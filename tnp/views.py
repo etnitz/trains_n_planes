@@ -11,3 +11,7 @@ def plane_list(request):
     planes = Plane.objects.all()
     return render(request, 'tnp/plane_list.html', {'planes':planes})
 
+def car_list(request):
+    cars = Car.objects.all()
+    return render(request, 'tnp/car_list.html', {'cars':cars})
+
