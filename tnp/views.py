@@ -19,7 +19,7 @@ def boat_list(request):
     boats = Boat.objects.all()
     return render(request, 'tnp/boat_list.html', {'boats':boats})
 
-def train_detail(request):
-    train = Train.objects.get(id=pk)
+def train_detail(request, pk):
+    train = Train.objects.get(id = pk)
     return render(request, 'tnp/train_detail.html', {'train':train})
 
