@@ -2,7 +2,7 @@
 <ul>
     {% for plane in planes %}
     <li>
-        <a href="">{{ plane.name }}</a>
+        <a href="{% url 'plane_detail' pk=plane.pk %}">{{ plane.name }}</a>
     </li>
     {% endfor %}
 </ul>
