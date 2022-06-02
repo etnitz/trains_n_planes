@@ -1,3 +1,4 @@
+{% extends 'tnp/base.html' %} {% block content %}
 <h1>{{ boat.name }} <a href="">(edit)</a></h1>
 <img src="{{ boat.photo_url }}" alt="" class="boat-photo"/>
 <h4>Type: {{ boat.type }}</h4>
@@ -6,3 +7,4 @@
 <h4>Year: {{ boat.year }}</h4>
 <h4>Country: {{ boat.country }}</h4>
 <p>{{ boat.description }}</p>
+{% endblock %}

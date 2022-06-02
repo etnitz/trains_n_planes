@@ -1,4 +1,4 @@
-{% block content %}
+{% extends 'tnp/base.html' %} {% block content %}
 <h1>{{ train.name }} <a href="">(edit)</a></h1>
 <img src="{{ train.photo_url }}" alt="" class="train-photo"/>
 <h4>Power Type: {{ train.power_type }}</h4>

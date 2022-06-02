@@ -1,3 +1,4 @@
+{% extends 'tnp/base.html' %} {% block content %}
 <h1>{{ plane.name }} <a href="">(edit)</a></h1>
 <img src="{{ plane.photo_url }}" alt="" class="plane-photo"/>
 <h4>Role: {{ plane.role }}</h4>
@@ -5,3 +6,4 @@
 <h4>Year: {{ plane.year }}</h4>
 <h4>Country: {{ plane.country }}</h4>
 <p>{{ plane.description }}</p>
+{% endblock %}
