@@ -30,3 +30,7 @@ def plane_detail(request, pk):
 def car_detail(request, pk):
     car = Car.objects.get(id = pk)
     return render(request, 'tnp/car_detail.html', {'car':car})
+
+def boat_detail(request, pk):
+    boat = Boat.objects.get(id = pk)
+    return render(request, 'tnp/boat_detail.html', {'boat':boat})
