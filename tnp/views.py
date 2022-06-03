@@ -109,3 +109,14 @@ def car_edit(request, pk):
     else:
         form = CarForm(instance=car)
     return render(request, 'tnp/car_form.html', {'form':form})
+
+def boat_edit(request, pk):
+    boat = Boat.objects.get(pk=pk)
+    if request.method == 'POST':
+        form = BoatForm(request.POST, instance=boat)
+        if form.is_valid():
+            boat = form.save()
+            return redirect('boat_detail', pk=boat.pk)
+    else:
+        form = BoatForm(instance=boat)
+    return render(request, 'tnp/boat_form.html', {'form':form})
