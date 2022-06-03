@@ -14,5 +14,6 @@ urlpatterns = [
     path('planes/new', views.plane_create, name='plane_create'),
     path('cars/new', views.car_create, name='car_create'),
     path('boats/new', views.boat_create, name='boat_create'),
-    path('trains/<int:pk>/edit', views.train_edit, name='train_edit')
+    path('trains/<int:pk>/edit', views.train_edit, name='train_edit'),
+    path('planes/<int:pk>/edit', views.plane_edit, name='plane_edit')
 ]
