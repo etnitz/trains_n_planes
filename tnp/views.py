@@ -76,3 +76,14 @@ def boat_create(request):
     else:
         form = BoatForm()
     return render(request, 'tnp/boat_form.html', {'form':form})
+
+def train_edit(request, pk):
+    train = Train.objects.get(pk = pk)
+    if request.method == 'Post':
+        form = TrainForm(request.POST, instance=train)
+        if form.is_valid():
+            train = form.save()
+            return redirect('train_detail', pk=train.pk)
+    else:
+        form = TrainForm(instance=train)
+    return render(request, 'tnp/train_form.html', {'form':form})
