@@ -6,4 +6,5 @@
 <h4>Year: {{ plane.year }}</h4>
 <h4>Country: {{ plane.country }}</h4>
 <p>{{ plane.description }}</p>
+<a href="{% url 'plane_delete' pk=plane.pk %}">Delete</a>
 {% endblock %}
