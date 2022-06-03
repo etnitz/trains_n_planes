@@ -1,0 +1,7 @@
+{% extends 'tnp/base.html' %} {% block content %}
+<h1>New Boat</h1>
+<form method="POST" class="boat-form">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit" class="save btn btn-default">Save</button>
+</form>
+{% endblock %}
