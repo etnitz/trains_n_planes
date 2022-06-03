@@ -98,3 +98,14 @@ def plane_edit(request, pk):
     else:
         form = PlaneForm(instance=plane)
     return render(request, 'tnp/plane_form.html', {'form':form})
+
+def car_edit(request, pk):
+    car = Car.objects.get(pk=pk)
+    if request.method == 'POST':
+        form = CarForm(request.POST, instance=car)
+        if form.is_valid():
+            car = form.save()
+            return redirect('car_detail', pk=car.pk)
+    else:
+        form = CarForm(instance=car)
+    return render(request, 'tnp/car_form.html', {'form':form})
