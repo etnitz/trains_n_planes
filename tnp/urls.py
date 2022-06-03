@@ -10,5 +10,6 @@ urlpatterns = [
     path('planes/<int:pk>', views.plane_detail, name='plane_detail'),
     path('cars/<int:pk>', views.car_detail, name='car_detail'),
     path('boats/<int:pk>', views.boat_detail, name='boat_detail'),
-    path('trains/new', views.train_create, name='train_create')
+    path('trains/new', views.train_create, name='train_create'),
+    path('planes/new', views.plane_create, name='plane_create')
 ]
