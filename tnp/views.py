@@ -1,7 +1,7 @@
 from unicodedata import name
 from django.shortcuts import render, redirect
 from .models import Plane, Train, Car, Boat
-from .forms import CarForm, TrainForm, PlaneForm
+from .forms import BoatForm, CarForm, TrainForm, PlaneForm
 
 # Create your views here.
 
@@ -66,3 +66,13 @@ def car_create(request):
     else:
         form = CarForm()
     return render(request, 'tnp/car_form.html', {'form':form})
+
+def boat_create(request):
+    if request.method == 'POST':
+        form = BoatForm(request.POST)
+        if form.is_valid():
+            boat = form.save()
+            return redirect('boat_detail', pk = boat.pk)
+    else:
+        form = BoatForm()
+    return render(request, 'tnp/boat_form.html', {'form':form})
