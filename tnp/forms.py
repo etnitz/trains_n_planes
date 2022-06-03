@@ -1,3 +1,4 @@
+from dataclasses import fields
 from pyexpat import model
 from django import forms
 from .models import Train, Plane, Car, Boat
@@ -19,3 +20,9 @@ class CarForm(forms.ModelForm):
     class Meta:
         model = Car
         fields = ('name', 'type', 'manufacturer', 'year', 'country', 'description', 'photo_url')
+
+class BoatForm(forms.ModelForm):
+
+    class Meta:
+        model = Boat
+        fields = ('name', 'type', 'builder', 'year', 'length', 'country', 'description', 'photo_url')
