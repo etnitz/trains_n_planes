@@ -79,7 +79,7 @@ def boat_create(request):
 
 def train_edit(request, pk):
     train = Train.objects.get(pk = pk)
-    if request.method == 'Post':
+    if request.method == 'POST':
         form = TrainForm(request.POST, instance=train)
         if form.is_valid():
             train = form.save()
