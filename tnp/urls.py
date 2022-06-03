@@ -16,5 +16,6 @@ urlpatterns = [
     path('boats/new', views.boat_create, name='boat_create'),
     path('trains/<int:pk>/edit', views.train_edit, name='train_edit'),
     path('planes/<int:pk>/edit', views.plane_edit, name='plane_edit'),
-    path('cars/<int:pk>/edit', views.car_edit, name='car_edit')
+    path('cars/<int:pk>/edit', views.car_edit, name='car_edit'),
+    path('boats/<int:pk>/edit', views.boat_edit, name='boat_edit')
 ]

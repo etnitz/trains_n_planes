@@ -1,5 +1,5 @@
 {% extends 'tnp/base.html' %} {% block content %}
-<h1>{{ boat.name }} <a href="">(edit)</a></h1>
+<h1>{{ boat.name }} <a href="{% url 'boat_edit' pk=boat.pk %}">(edit)</a></h1>
 <img src="{{ boat.photo_url }}" alt="" class="boat-photo"/>
 <h4>Type: {{ boat.type }}</h4>
 <h4>Builder: {{ boat.builder }}</h4>
