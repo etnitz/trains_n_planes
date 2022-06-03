@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Plane, Train, Car, Boat
+from .forms import TrainForm
 
 # Create your views here.
 
@@ -34,3 +35,13 @@ def car_detail(request, pk):
 def boat_detail(request, pk):
     boat = Boat.objects.get(id = pk)
     return render(request, 'tnp/boat_detail.html', {'boat':boat})
+
+def train_create(request):
+    if request.method == 'POST':
+        form = TrainForm(request.POST)
+        if form.is_valid():
+            train = form.save()
+            return redirect('train_detail', pk = train.pk)
+    else:
+        form = TrainForm()
+    return render(request, 'tnp/train_form.html', {'form':form})
