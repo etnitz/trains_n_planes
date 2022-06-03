@@ -42,7 +42,7 @@ def train_create(request):
         form = TrainForm(request.POST)
         if form.is_valid():
             train = form.save()
-            return redirect('train_detail', pk = train.pk)
+            return redirect('train_detail', pk=train.pk)
     else:
         form = TrainForm()
     return render(request, 'tnp/train_form.html', {'form':form})
@@ -52,7 +52,7 @@ def plane_create(request):
         form = PlaneForm(request.POST)
         if form.is_valid():
             plane = form.save()
-            return redirect('plane_detail', pk = plane.pk)
+            return redirect('plane_detail', pk=plane.pk)
     else:
         form = PlaneForm()
     return render(request, 'tnp/plane_form.html', {'form':form})
@@ -62,7 +62,7 @@ def car_create(request):
         form = CarForm(request.POST)
         if form.is_valid():
             car = form.save()
-            return redirect('car_detail', pk = car.pk)
+            return redirect('car_detail', pk=car.pk)
     else:
         form = CarForm()
     return render(request, 'tnp/car_form.html', {'form':form})
@@ -72,13 +72,13 @@ def boat_create(request):
         form = BoatForm(request.POST)
         if form.is_valid():
             boat = form.save()
-            return redirect('boat_detail', pk = boat.pk)
+            return redirect('boat_detail', pk=boat.pk)
     else:
         form = BoatForm()
     return render(request, 'tnp/boat_form.html', {'form':form})
 
 def train_edit(request, pk):
-    train = Train.objects.get(pk = pk)
+    train = Train.objects.get(pk=pk)
     if request.method == 'POST':
         form = TrainForm(request.POST, instance=train)
         if form.is_valid():
@@ -87,3 +87,14 @@ def train_edit(request, pk):
     else:
         form = TrainForm(instance=train)
     return render(request, 'tnp/train_form.html', {'form':form})
+
+def plane_edit(request, pk):
+    plane = Plane.objects.get(pk=pk)
+    if request.method == 'POST':
+        form = PlaneForm(request.POST, instance=plane)
+        if form.is_valid():
+            plane = form.save()
+            return redirect('plane_detail', pk=plane.pk)
+    else:
+        form = PlaneForm(instance=plane)
+    return render(request, 'tnp/plane_form.html', {'form':form})
