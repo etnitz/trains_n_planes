@@ -120,3 +120,7 @@ def boat_edit(request, pk):
     else:
         form = BoatForm(instance=boat)
     return render(request, 'tnp/boat_form.html', {'form':form})
+
+def train_delete(request, pk):
+    Train.objects.get(pk=pk).delete()
+    return redirect('train_list')

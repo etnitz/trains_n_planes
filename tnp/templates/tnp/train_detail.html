@@ -6,4 +6,5 @@
 <h4>Year: {{ train.year }}</h4>
 <h4>Country: {{ train.country }}</h4>
 <p>{{ train.description }}</p>
+<a href="{% url 'train_delete' pk=train.pk %}">Delete</a>
 {% endblock %}
