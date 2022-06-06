@@ -7,4 +7,5 @@
 <h4>Year: {{ boat.year }}</h4>
 <h4>Country: {{ boat.country }}</h4>
 <p>{{ boat.description }}</p>
+<a href="{% url 'boat_delete' pk=boat.pk %}">Delete</a>
 {% endblock %}

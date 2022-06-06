@@ -132,3 +132,7 @@ def plane_delete(request, pk):
 def car_delete(request, pk):
     Car.objects.get(pk=pk).delete()
     return redirect('car_list')
+
+def boat_delete(request, pk):
+    Boat.objects.get(pk=pk).delete()
+    return redirect('boat_list')
