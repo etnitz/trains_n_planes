@@ -128,3 +128,7 @@ def train_delete(request, pk):
 def plane_delete(request, pk):
     Plane.objects.get(pk=pk).delete()
     return redirect('plane_list')
+
+def car_delete(request, pk):
+    Car.objects.get(pk=pk).delete()
+    return redirect('car_list')
