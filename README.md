@@ -30,9 +30,9 @@ It started out as a train and plane blog thing. Now it is going to be an API for
 
 ***
 ### ***Future Updates***
-- [ ] creating automobiles model
-- [ ] creating seacraft model
-- [ ] creating login and auth
+- [ ] adding login and auth
+- [ ] adding polls
+- [ ] adding comments
 
 ***
 ### ***Credits***
