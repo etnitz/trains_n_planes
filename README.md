@@ -4,7 +4,7 @@
 [GitHub](https://github.com/etnitz) [LinkedIn](https://www.linkedin.com/in/ethan-nitz-5822a112/)
 ***
 ### ***Description***
-It started out as a train and plane blog thing. Now it is going to be an API for for all vehicles! Land, sea, air, and space! It going to be built in Python using Django framework with a postgreSQL database.
+It started out as a train and plane blog thing. Now it is going to be an API for all vehicles! Land, sea, air, and space! It is going to be built in Python using Django framework with a postgreSQL database.
 ***
 ### ***Technologies Used***
 1. HTML

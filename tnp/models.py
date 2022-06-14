@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class Editor(models.Model):
     name = models.CharField(max_length=100)
@@ -9,6 +10,7 @@ class Editor(models.Model):
 
     def __str__(self):
         return self.name
+
 
 class Train(models.Model):
     name = models.CharField(max_length=100)
@@ -22,6 +24,7 @@ class Train(models.Model):
     def __str__(self):
         return self.name
 
+
 class Plane(models.Model):
     name = models.CharField(max_length=100)
     role = models.CharField(max_length=100)
@@ -34,6 +37,7 @@ class Plane(models.Model):
     def __str__(self):
         return self.name
 
+
 class Car(models.Model):
     name = models.CharField(max_length=100)
     type = models.CharField(max_length=100)
@@ -45,6 +49,7 @@ class Car(models.Model):
 
     def __str__(self):
         return self.name
+
 
 class Boat(models.Model):
     name = models.CharField(max_length=100)
